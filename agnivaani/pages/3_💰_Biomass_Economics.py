@@ -24,21 +24,12 @@ st.markdown("""
 with st.sidebar:
     st.markdown("## 🔥 Agnivāṇī")
     st.divider()
-    st.page_link("Home.py",                        label="🏠 Home")
-    st.page_link("pages/1_📊_Dashboard.py",        label="📊 Dashboard")
-    st.page_link("pages/2_🌬️_Smoke_Trajectory.py", label="🌬️ Smoke Trajectory")
-    st.page_link("pages/3_💰_Biomass_Economics.py",label="💰 Biomass Economics")
-    st.page_link("pages/4_📞_Voice_Call_Log.py",   label="📞 Voice Call Log")
+    st.markdown("🏠 [Home](/)")
+    st.markdown("📊 [Dashboard](/Dashboard)")
+    st.markdown("🌬️ [Smoke_Trajectory](/Smoke_Trajectory)")
+    st.markdown("💰 [Biomass_Economics](/Biomass_Economics)")
+    st.markdown("📞 [Voice_Call_Log](/Voice_Call_Log)")
     st.divider()
-    st.markdown("**💰 Calculator**")
-    field_area     = st.number_input("Field area (hectares)", 1.0, 20.0, 6.2, 0.1)
-    stubble_yield  = st.slider("Stubble yield (t/ha)", 2.0, 6.0, 3.5, 0.1)
-    base_price     = st.slider("Bio-CNG price (₹/tonne)", 1500, 4000, 2400, 100)
-    dyn_premium    = st.slider("Dynamic premium (%)", 10, 60, 29, 1)
-    transport_cost = st.slider("Transport cost (₹/tonne)", 200, 800, 420, 10)
-    divert_pct     = st.slider("Residue saved (%)", 50, 100, 90, 5)
-    st.divider()
-    st.caption("Prices: SATAT scheme · MNRE · Market data")
 
 # ── CALC ─────────────────────────────────────────────────────────────────────
 total_stubble = field_area * stubble_yield
