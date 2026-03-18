@@ -33,19 +33,12 @@ st.markdown("""
 with st.sidebar:
     st.markdown("## 🔥 Agnivāṇī")
     st.divider()
-    st.page_link("Home.py",                        label="🏠 Home")
-    st.page_link("pages/1_📊_Dashboard.py",        label="📊 Dashboard")
-    st.page_link("pages/2_🌬️_Smoke_Trajectory.py", label="🌬️ Smoke Trajectory")
-    st.page_link("pages/3_💰_Biomass_Economics.py",label="💰 Biomass Economics")
-    st.page_link("pages/4_📞_Voice_Call_Log.py",   label="📞 Voice Call Log")
+    st.markdown("🏠 [Home](/)")
+    st.markdown("📊 [Dashboard](/Dashboard)")
+    st.markdown("🌬️ [Smoke_Trajectory](/Smoke_Trajectory)")
+    st.markdown("💰 [Biomass_Economics](/Biomass_Economics)")
+    st.markdown("📞 [Voice_Call_Log](/Voice_Call_Log)")
     st.divider()
-
-    st.markdown("**⚙️ Controls**")
-    auto_refresh = st.toggle("Auto-refresh (10s)", value=False)
-    if st.button("🔄 Refresh Now", use_container_width=True):
-        st.rerun()
-    st.divider()
-    st.caption("Live Data: Sentinel-3 SLSTR NRT · Google AMED API")
 
 # ── FIELD DATA ────────────────────────────────────────────────────────────────
 FIELDS = [
