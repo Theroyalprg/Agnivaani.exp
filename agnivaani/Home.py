@@ -47,15 +47,13 @@ st.markdown("""
 # ── SIDEBAR ─────────────────────────────────────────────────────────────────
 with st.sidebar:
     st.markdown("## 🔥 Agnivāṇī")
-    st.caption("Nocturnal Biomass-Arbitrage & Smoke-Trajectory Agent")
     st.divider()
-    st.page_link("Home.py",                        label="🏠 Home",            )
-    st.page_link("pages/1_📊_Dashboard.py",        label="📊 Dashboard")
-    st.page_link("pages/2_🌬️_Smoke_Trajectory.py", label="🌬️ Smoke Trajectory")
-    st.page_link("pages/3_💰_Biomass_Economics.py",label="💰 Biomass Economics")
-    st.page_link("pages/4_📞_Voice_Call_Log.py",   label="📞 Voice Call Log")
+    st.markdown("🏠 [Home](/)")
+    st.markdown("📊 [Dashboard](/Dashboard)")
+    st.markdown("🌬️ [Smoke_Trajectory](/Smoke_Trajectory)")
+    st.markdown("💰 [Biomass_Economics](/Biomass_Economics)")
+    st.markdown("📞 [Voice_Call_Log](/Voice_Call_Log)")
     st.divider()
-    st.caption("Data: Sentinel-3 · Google AMED · NeuralGCM · Bhashini VoicERA")
 
 # ── HERO ────────────────────────────────────────────────────────────────────
 st.markdown('<div class="hero">', unsafe_allow_html=True)
