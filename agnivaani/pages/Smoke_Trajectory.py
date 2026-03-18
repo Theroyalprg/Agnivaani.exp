@@ -21,11 +21,25 @@ with st.sidebar:
     st.markdown("## 🔥 Agnivāṇī")
     st.divider()
     st.markdown("🏠 [Home](/)")
-    st.markdown("📊 [Dashboard](/Dashboard)")
-    st.markdown("🌬️ [Smoke_Trajectory](/Smoke_Trajectory)")
-    st.markdown("💰 [Biomass_Economics](/Biomass_Economics)")
-    st.markdown("📞 [Voice_Call_Log](/Voice_Call_Log)")
+    st.markdown("📊 [Dashboard](/1_Dashboard)")
+    st.markdown("🌬️ [Smoke Trajectory](/2_Smoke_Trajectory)")
+    st.markdown("💰 [Biomass Economics](/3_Biomass_Economics)")
+    st.markdown("📞 [Voice Call Log](/4_Voice_Call_Log)")
     st.divider()
+    st.markdown("**🌀 Model Controls**")
+    selected_field = st.selectbox("Select Field", [
+        "F001 — Gurmeet Singh, Moga (BURNING)",
+        "F002 — Balwinder Kaur, Ludhiana (HARVESTED)",
+        "F005 — Ranjit Kumar, Fatehgarh (BURNING)",
+        "F008 — Jagtar Singh, Ferozepur (HARVESTED)",
+        "F012 — Baljinder Mann, Ludhiana (BURNING)",
+    ])
+    forecast_hours = st.slider("Forecast Window (hours)", 6, 72, 24, step=6)
+    wind_speed     = st.slider("Wind Speed (km/h)", 5, 40, 14)
+    wind_dir       = st.slider("Wind Direction (°)", 150, 270, 210)
+    show_uncertainty = st.checkbox("Show Uncertainty Envelope", value=True)
+    st.divider()
+    st.caption("Model: Google NeuralGCM · ML + NWP hybrid · 72h window")
 
 # ── TRAJECTORY CALCULATION ────────────────────────────────────────────────────
 origins = {
