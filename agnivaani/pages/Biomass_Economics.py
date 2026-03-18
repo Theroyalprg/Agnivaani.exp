@@ -172,10 +172,14 @@ with c2:
         title="Punjab-wide Impact vs. Diversion Rate",
         paper_bgcolor="#0d1424", plot_bgcolor="#0d1424", font_color="#8fa8c8",
         height=300, margin=dict(l=0,r=0,t=40,b=0),
-        xaxis=dict(title="Diversion Rate (%)",gridcolor="#1e3352",ticksuffix="%"),
-        yaxis=dict(title="Farmer Income (₹ Crore)",titlefont=dict(color="#2ecc71"),gridcolor="#1e3352"),
-        yaxis2=dict(title="CO₂ Avoided (M t)",overlaying="y",side="right",titlefont=dict(color="#8fa8c8")),
-        legend=dict(bgcolor="#111b2e",bordercolor="#1e3352",borderwidth=1)
+        xaxis=dict(title="Diversion Rate (%)", gridcolor="#1e3352", ticksuffix="%"),
+        yaxis=dict(title="Farmer Income (₹ Crore)", gridcolor="#1e3352"),
+        legend=dict(bgcolor="#111b2e", bordercolor="#1e3352", borderwidth=1)
+    )
+    fig_scale.update_traces(selector=dict(name="CO₂ avoided (M t)"),
+                            yaxis="y2")
+    fig_scale.update_layout(
+        yaxis2=dict(title="CO₂ Avoided (M t)", overlaying="y", side="right")
     )
     st.plotly_chart(fig_scale, use_container_width=True)
 
