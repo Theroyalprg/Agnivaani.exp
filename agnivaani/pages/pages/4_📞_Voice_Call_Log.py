@@ -21,18 +21,12 @@ st.markdown("""
 with st.sidebar:
     st.markdown("## 🔥 Agnivāṇī")
     st.divider()
-    st.page_link("Home.py",                        label="🏠 Home")
-    st.page_link("pages/1_📊_Dashboard.py",        label="📊 Dashboard")
-    st.page_link("pages/2_🌬️_Smoke_Trajectory.py", label="🌬️ Smoke Trajectory")
-    st.page_link("pages/3_💰_Biomass_Economics.py",label="💰 Biomass Economics")
-    st.page_link("pages/4_📞_Voice_Call_Log.py",   label="📞 Voice Call Log")
+    st.markdown("🏠 [Home](/)")
+    st.markdown("📊 [Dashboard](/Dashboard)")
+    st.markdown("🌬️ [Smoke_Trajectory](/Smoke_Trajectory)")
+    st.markdown("💰 [Biomass_Economics](/Biomass_Economics)")
+    st.markdown("📞 [Voice_Call_Log](/Voice_Call_Log)")
     st.divider()
-    st.markdown("**📊 Model Stats**")
-    st.metric("AWWER Score", "91.3%", "+2.1%")
-    st.metric("Punjabi Accuracy", "94.7%", "+0.8%")
-    st.metric("Avg Call Duration", "2m 18s", "-12s")
-    st.divider()
-    st.caption("Model: VoicERA · Bhashini AWWER · Agriculture-tuned")
 
 # ── CALL DATA ─────────────────────────────────────────────────────────────────
 CALLS = [
