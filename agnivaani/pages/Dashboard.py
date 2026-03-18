@@ -35,11 +35,16 @@ with st.sidebar:
     st.divider()
     st.markdown("🏠 [Home](/)")
     st.markdown("📊 [Dashboard](/Dashboard)")
-    st.markdown("🌬️ [Smoke_Trajectory](/Smoke_Trajectory)")
-    st.markdown("💰 [Biomass_Economics](/Biomass_Economics)")
-    st.markdown("📞 [Voice_Call_Log](/Voice_Call_Log)")
+    st.markdown("🌬️ [Smoke Trajectory](/Smoke_Trajectory)")
+    st.markdown("💰 [Biomass Economics](/Biomass_Economics)")
+    st.markdown("📞 [Voice Call Log](/Voice_Call_Log)")
     st.divider()
-
+    st.markdown("**⚙️ Controls**")
+    auto_refresh = st.toggle("Auto-refresh (10s)", value=False)
+    if st.button("🔄 Refresh Now", use_container_width=True):
+        st.rerun()
+    st.divider()
+    st.caption("Live Data: Sentinel-3 SLSTR NRT · Google AMED API")
 # ── FIELD DATA ────────────────────────────────────────────────────────────────
 FIELDS = [
     {"id":"F001","farmer":"Gurmeet Singh",    "village":"Lohian Khas",  "district":"Moga",           "area_ha":6.2, "status":"BURNING",   "sri":87, "lat":30.82,"lon":75.17,"phone":"+919876543210"},
