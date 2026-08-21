@@ -51,7 +51,7 @@ net_dyn       = gross_dyn  - transport_tot
 
 # ── HEADER ────────────────────────────────────────────────────────────────────
 st.markdown("## 💰 Biomass Arbitrage Engine")
-st.caption("Making stubble worth MORE unburnt than burnt — delivered in real time to farmers")
+st.caption("Making stubble worth MORE unburnt than burnt, delivered in real time to farmers")
 
 # ── KPIs ─────────────────────────────────────────────────────────────────────
 cols = st.columns(5)
